@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .responsive {
+            width: 300px;
+            height: 300px;
+            border: 4px solid black;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: slideMe;
+            animation-duration: 5s; /*opcional*/
+            animation-iteration-count: infinite;/*opcional*/ 
+            animation-direction: alternate;/*opcional*/
+
+        }
+      
+            .layout {
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+            .nav {
+                flex-basis: 100%;
+                border-bottom: 1px solid gray ;
+            }
+
+            .sidebar {
+                flex-basis: 20%;
+                border-right: 1px solid gray;
+            }
+            .responsive {
+                background-color: red   ;            
+            }
+         
+        @keyframes slideMe {
+            from {
+                left:0;
+            }
+            to {
+                left:100%;
+            }
+        }
+           
+    </style>
+</head>
+
+<body>
+    <!--<div class="responsive"></div> -->
+    <div class="layout">
+        <div class="nav">
+            navegacion aqui
+            <div class="sidebar">
+                sidebar aqui
+                <div class="content">
+                    contenido aqui
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html> 

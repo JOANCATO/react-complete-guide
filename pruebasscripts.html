@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const person3 = {
+        "name":"Antonio",
+        "correo":"jact23@hotmail.com",
+        "somethingelse":"otra cosa"
+        }
+
+        const {correo,name} = person3
+        console.log (person3 ["correo"])
+        console.log (person3)
+        console.log (name)
+        console.log(correo)
+
+
+        /*Class */
+console.log ("***************Ejemplo de clases*******")
+
+        class miclase {
+            ponernombre (gato) { /*puse "gato" solo por probar diferencia,, realmente en el ejercicio va la palabra "nombre o name"*/
+                this.nombre = gato
+            }
+            habla() {
+                if(this.nombre === undefined) {
+                    this.nombre = "... no no le han puesto nombre"
+                }    
+                console.log(`Woof Woof dice el perro llamado ${this.nombre}`) /*"(`)este se pone con Alt+96 "*/
+            }
+        }
+        const variable = new miclase()
+        variable.ponernombre("Kira") /*si quito el nombre, se cumple la condición if*/
+        variable.habla()
+console.log ("*************API AJAX FETCH ******")
+        fetch('https://swapi.dev/api/people/1')
+            .then(respuesta => respuesta.json())
+            .then(datos => {
+                console.log(datos)
+            })
+
+
+
+
+    </script>
+</body>
+</html>

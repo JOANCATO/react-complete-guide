@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-family: sans-serif;
+        }
+        button {
+            display: block;
+            margin: auto;
+        }
+        img{
+            width: 200px;
+            height: auto;
+            box-shadow: 10px 10px 5px #000000;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+
+
+        }
+        .caja {
+            background-color: red;
+            border-color: #000000;
+            border-style: solid;
+            margin: auto;
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .ancho {
+            width: 20%;
+        }
+        .width-100 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button class="genera">Genera personaje</button>
+    <h1 class="name"></h1>
+   
+    <img src="" class = "character-img" alt="">
+    <hr>
+    <button class="ejemploToggle">Ejemplo de toggle</button>
+    
+    <div class="caja"></div>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.genera").on("click", function() {
+                const numeroRandom = Math.ceil(Math.random()*88)
+                $.get(`https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/id/${numeroRandom}.json`,function(data){
+                    console.log(data)
+                    $("h1.name").text(data['name'])
+                    $(".character-img").attr("src",data['image'])
+                })                     
+            })
+            $("button.ejemploToggle").on("click",function() {
+                const $caja = $(".caja");
+                setTimeout (function() {
+                    $caja.toggleClass ("blue") 
+                        if ($caja.width() == "200") {
+                            $caja.animate ({width: "100%"},2000)
+                            
+                        } else {
+                            $caja.animate ({width: 200},2000)
+                              
+                            
+                        }
+                
+                },500)         
+
+                
+                
+            })
+            
+        })
+
+    </script>
+</body>
+</html>

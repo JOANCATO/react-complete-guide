@@ -1,0 +1,264 @@
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-image: url("../images/foto antonio castillo.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0 50% 0 50%;
+    box-shadow: -12px 8px 20px /*inset*/black, 2px 8px 60px inset red;
+    
+ }
+ .boxd {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+   /*background-image: url("images/foto antonio castillo.jpg");*/
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50% 0 50% 0;
+    box-shadow: -12px 8px 20px /*inset*/black, 2px 8px 60px inset red;
+    
+ }
+ 
+ body { 
+    backgroud-color: red     ;
+ } 
+
+ .conimagen {
+    background-image: url("../images/imagenprueba.png");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+    height: 200px;
+ }
+ .cuadrotransparente{
+    width: 20%;
+    background-color: blue;
+    opacity: .6;
+    height:100% ;
+ }
+ .foto_flotante{
+    float:left  ; margin: 10px; border: 1px solid black;box-shadow: 0 0 5px black;
+ }
+ p {
+    background-color: rgba(0, 225, 255, .8);
+    text-align: justify;
+    
+ }
+ span {
+ 
+    width: 200px;
+    height: 200px;
+    /*border: 1px solid black;*/
+ }
+ .textosombreado{
+    text-shadow: 2px 2px 5px red;
+ }
+ .boxpadre{
+    width: 300px;
+    height: 300px;
+    border: 20px solid black;
+    position: relative;
+ }
+ .boxhijo{
+    width: 30px;
+    height: 30px;
+    border: solid 10px blue    ;
+    position: absolute;
+    top:0; 
+    right:0;
+ }
+ .cajasticky{
+    position: sticky;
+    background-color: antiquewhite;
+    border-bottom: 2px solid black;
+    padding: 20px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+ }
+ .cajaconscroll{
+    
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: solid 10px black;
+    overflow: auto;
+ }
+ .primerlinea::first-line{
+color: red;
+ }
+ q:lang(es){
+   quotes: "=" "=";
+ }
+
+ q:lang(us){
+   quotes: '"' '"';
+ }
+ .after{
+   text-decoration:none;
+   color: black;
+   position: relative;
+ }
+ .after::before {
+   content: "++  prueba  ++ ";
+   width:100%;
+   height: 7px;
+   background-color: blue;
+   position: absolute;
+   bottom:  -1;
+   left: 0;
+   z-index: 1;
+ }
+::selection { /*color de lo seleccionado*/
+   background-color: green;
+}
+
+.transition{
+background-color: white;
+display: inline-block;
+padding: 5px 15px;
+color: black;
+text-decoration: none;
+border: 1px solid black;
+/*transition: all .5s; /*all se refiere a todos los elementos que cambian*/
+transition: background-color .5s;
+transition: color 1s;
+transition: padding .8s;
+
+}
+.transition:hover{
+   background-color: black;
+   color: white;
+   padding: 10px 30px;
+
+}
+.gradient {
+   /*background-image: linear-gradient(to right,black,yellow); En  */ 
+   background-image: linear-gradient(45deg,black,yellow);
+   color: white;
+   height: 50px;
+   width: 100%;
+}
+
+.layout {
+   color:white;
+   text-align: center;
+   font-size: 30px;
+   widht:100%;
+   height:200px ;
+   border: 5px solid yellow;
+   background-image:linear-gradient(180deg,
+                       rgba(188, 235, 18, 0.4) 30%,
+                        rgba(47, 6, 95, .6) 90%),
+                     url("https://img.freepik.com/fotos-gratis/respingo-colorido-abstrato-3d-background-generativo-ai-background_60438-2509.jpg");
+}
+.transformation {
+   width: 150px;
+   height: 150px;
+   border: 10px solid black;
+   margin: 50px auto;
+
+   /*transform: translate(100px, 100px);*/
+   /*transform: rotate(45deg);*/
+   /*transform: scale(2);*/
+   transform: skew(20deg,10deg);
+   /*transform: skewX(20deg);*/
+}
+
+.navigation {
+  
+   border: 5px solid red;
+   flex-basis: 20%;
+   flex-grow: 0;
+   flex-shrink: 1;
+}
+.content {
+   border: 5px solid red;
+   flex-basis: 70;
+   flex-grow: 1;
+   flex-shrink: 0;
+}
+
+   .grid{
+      display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 20px ;
+        grid-row-gap: 5px;
+   }
+   .item {
+      border: 3px solid red;
+   }
+
+   .item1, .item7 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+   }
+   .item6 {
+      grid-row-start: 2;
+      grid-row-end: 4;
+   }
+.container {
+   display: flex;
+   border: 5px solid red;
+   flex-basis: 95%;
+   flex-shrink: 0;
+   flex-grow: 0;
+
+   border: 5px solid red;
+   flex-basis: 95%;
+   flex-shrink: 0;
+   flex-grow: 0;**/
+
+}
+.header {
+   flex-basis: 100%;
+   flex-grow: 1;
+   flex-shrink: 0;
+   background-color: aliceblue;
+   color: brown;
+   border: 4px solid black;
+   padding: 20px;
+}
+
+.responsive {
+   background-color: black;
+}
+
+     
+
+.animation {
+   width: 300px;
+   height: 300px;
+   border: 4px solid black;
+   border-radius: 50%;
+   background-color: blue;
+   position: absolute;
+   top: 0;
+   left: 0;
+   animation-name: slideMe;
+   animation-duration: 5s; /*opcional*/
+   animation-iteration-count: infinite;/*opcional*/ 
+   animation-direction: alternate;/*opcional*/
+
+}
+@media (min-width: 640px) {
+   .responsive {
+       background-color: red   ;            
+   }
+}   
+@keyframes slideMe {
+   from {
+       left:0;
+   }
+   to {
+       left:100%;
+   }
+}
+  

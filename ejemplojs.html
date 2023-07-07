@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="box"><h1>Aquí va escrito algo </h1></div>
+   <div id="box2"><h1>Aquí va esctio box2</h1></div>
+    <script>
+        var name = "Antonio2";
+        if(name=="Antonio"){ //con esto se comenta en la misma linea en js, y varias igual que en htm con */
+            alert("Hola A ti mismo!");
+            alert("Hola, si te reconozco, mucho gusto");            
+        } else {
+            alert("No te reconozco");
+            console.log("nombre no reconozido");
+        }
+        function greeting(name){
+            return 'Hola ${name}, welcome to javascript';
+        }
+        const greet = greeting('Antonio');
+        console.log("Escribe un log aqui");
+        console.warn("Esto es un warning");
+        console.error("Esto es un error");
+        
+    </script>
+</body>
+</html>
